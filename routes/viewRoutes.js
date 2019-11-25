@@ -1,5 +1,14 @@
+const {
+  burgers: {
+    getBurgers
+  }
+} = require(`../controllers`)
+
 module.exports = app => {
   app.get(`/`, (req, res) => {
-    res.render(`index`)
+    getBurgers(burgers => {
+      res.render(`index`, { burgers })
+    })
+    
   })
 }

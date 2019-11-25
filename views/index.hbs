@@ -8,4 +8,21 @@
       <button id="addBurger">Add Burger</button>
     </p>
   </form>
+  {{#each burgers}}
+    <div>
+      <p>
+        Burger: {{name}}
+      </p>
+      <p>
+        Eaten: {{eaten}}
+      </p>
+
+      {{#if eaten}}
+      <p>Yes</p>
+      {{else}}
+      <p>No</p>
+      {{/if}}
+
+    </div>
+  {{/each}}
 </div>
