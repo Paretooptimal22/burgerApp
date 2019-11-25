@@ -1,13 +1,13 @@
 const db = require(`../config`)
 
 module.exports = {
-  getBurger() {
+  getBurgers() {
     let result = []
     db.query(`SELECT * FROM burgers`, (e, burgers) => {
       if (e) {
         console.log(e)
       }
-      result = burger
+      result = burgers
     })
     return result
   },

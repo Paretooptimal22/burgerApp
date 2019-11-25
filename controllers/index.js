@@ -1,3 +1,3 @@
 module.exports = {
-  pizzas: require(`./burgerController.js`)
+  burgers: require(`./burgerController.js`)
 }

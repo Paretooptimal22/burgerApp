@@ -3,7 +3,7 @@ const { burgers } = require(`../controllers`)
 module.exports = app => {
   // GET all burgers
   app.get(`/burgers`, (req, res) => {
-    pizzas.getPizza()
+    console.log(burgers.getBurgers())
     res.send(`GET all burgers`)
   })
 
