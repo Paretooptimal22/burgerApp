@@ -7,7 +7,7 @@
           <label for="burger">Burger</label>
         </div>
         <div class="col s1 input-field">
-          <button class="btn-large btn-floating waves-effect waves-light">
+          <button id="addBurger" class="btn-large btn-floating waves-effect waves-light amber">
             <i class="material-icons">
               add
             </i>
@@ -23,6 +23,11 @@
       {{#unless eaten}}
         <div class="row card-panel">
           <p class="center-align"><b>{{name}}</b></p>
+          <p class="center-align">
+            <button class="btn-floating waves-effect waves-light eatBurger">
+              <i class="material-icons">local_dining</i>
+            </button>
+          </p>
         </div>
       {{/unless}}
       {{/each}}
@@ -34,6 +39,11 @@
       {{#if eaten}}
         <div class="row card-panel">
           <p class="center-align"><b>{{name}}</b></p>
+          <p class="center-align">
+            <button class="btn-floating waves-effect waves-light pink removeBurger">
+              <i class="material-icons">delete</i>
+            </button>
+          </p>
         </div>
       {{/if}}
       {{/each}}
