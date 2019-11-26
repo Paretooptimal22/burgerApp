@@ -25,8 +25,12 @@ const eatBurger = id => {
     .catch(e => console.error(e))
 }
 
-const removeBurger = () => {
-
+const removeBurger = id => {
+  axios.delete(`/burgers/${id}`)
+    .then(() => {
+      console.log(`Burger Deleted!`)
+    })
+    .catch(e => console.error(e))
 }
 
 document.getElementById(`addBurger`).addEventListener(`click`, e => {
@@ -41,6 +45,7 @@ document.addEventListener(`click`, e => {
     eatBurger(e.target.parentNode.dataset.burger)
     window.location.reload()
   } else if (e.target.parentNode.className.includes(`removeBurger`)) {
-    removeBurger()
+    removeBurger(e.target.parentNode.dataset.burger)
+    window.location.reload()
   }
 })
